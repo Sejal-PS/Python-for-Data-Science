@@ -1,73 +1,73 @@
-Statistics for Data Science
+## Statistics for Data Science
 
 Statistics is an important part of Data Science.
 
 It helps us understand data, identify patterns, measure variation, compare values and make decisions based on data.
 
-Statistics is commonly used in:
+## Statistics is commonly used in:
 
-Data Analysis
+1.Data Analysis
 
-Exploratory Data Analysis (EDA)
+2.Exploratory Data Analysis (EDA)
 
-Machine Learning
+3.Machine Learning
 
-Business Analysis
+4.Business Analysis
 
-Research
+5.Research
 
-Data Interpretation
+6.Data Interpretation
 
-Topics Covered
+## Topics Covered
 
-Statistics basics
+* Statistics basics
 
-Population and Sample
+* Population and Sample
 
-Mean, Median and Mode
+* Mean, Median and Mode
 
-Range
+* Range
 
-Variance
+* Variance
 
-Standard Deviation
+* Standard Deviation
 
-Percentiles
+* Percentiles
 
-Quartiles
+* Quartiles
 
-Probability
+* Probability
 
-Probability Distributions
+* Probability Distributions
 
-Normal Distribution
+* Normal Distribution
 
-Skewness
+* Skewness
 
-Correlation
+* Correlation
 
-Covariance
+* Covariance
 
-Sampling
+* Sampling
 
-Hypothesis Testing
+* Hypothesis Testing
 
-Confidence Intervals
+* Confidence Intervals
 
-Practice Questions
+* Practice Questions
 
-Important Libraries
+### Important Libraries
 import statistics
 import numpy as np
 import pandas as pd
 import scipy.stats as stats
 
 
-Install required libraries:
+# Install required libraries:
 
 pip install numpy pandas scipy matplotlib seaborn
 
-Basic Statistics Flow
+# # Basic Statistics Flow
 Data
  ↓
 Understand Data
@@ -84,61 +84,61 @@ Inference
  ↓
 Decision Making
 
-Descriptive Statistics
+## Descriptive Statistics
 
-Descriptive statistics helps summarize and describe data.
+- Descriptive statistics helps summarize and describe data.
 
-Common measures:
+ * Common measures:
 
-Mean
+1. Mean
 
-Median
+2. Median
 
-Mode
+3. Mode
 
-Range
+4. Range
 
-Variance
+5. Variance
 
-Standard Deviation
+6. Standard Deviation
 
-Percentiles
+7. Percentiles
 
-Quartiles
+8. Quartiles
 
-Inferential Statistics
+## Inferential Statistics
 
 Inferential statistics helps us make conclusions about a population using sample data.
 
-Important concepts include:
+* Important concepts include:
 
-Sampling
+- Sampling
 
-Probability
+- Probability
 
-Confidence Interval
+- Confidence Interval
 
-Hypothesis Testing
+- Hypothesis Testing
 
-Data Science Use
+##  Data Science Use
 
-Statistics helps in:
+ Statistics helps in:
 
-Understanding datasets
+- Understanding datasets
 
-Detecting outliers
+- Detecting outliers
 
-Understanding distributions
+- Understanding distributions
 
-Finding relationships
+- Finding relationships
 
-Feature analysis
+- Feature analysis
 
-Model evaluation
+- Model evaluation
 
-Making data-driven decisions
+- Making data-driven decisions
 
-Official Documentation
+## Official Documentation
 
 Python Statistics:
 
