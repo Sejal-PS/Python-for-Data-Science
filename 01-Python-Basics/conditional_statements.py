@@ -1,19 +1,13 @@
 # Python Conditional Statements
 
-
-# -------------------------
 # 1. Simple if statement
-# -------------------------
-
 age = 25
 
 if age >= 18:
     print("Eligible")
 
-
 # -------------------------
 # 2. if-else statement
-# -------------------------
 
 age = 16
 
@@ -25,7 +19,7 @@ else:
 
 # -------------------------
 # 3. if-elif-else
-# -------------------------
+
 
 marks = 78
 
@@ -43,7 +37,6 @@ print("Grade:", grade)
 
 # -------------------------
 # 4. Multiple conditions
-# -------------------------
 
 age = 25
 salary = 50000
@@ -56,7 +49,7 @@ else:
 
 # -------------------------
 # 5. Nested if
-# -------------------------
+
 
 age = 25
 has_id = True
@@ -72,7 +65,7 @@ else:
 
 # -------------------------
 # 6. Data Science Example
-# -------------------------
+
 
 customer_age = 35
 purchase_amount = 7500
@@ -88,7 +81,7 @@ print("Customer Age:", customer_age)
 print("Purchase Amount:", purchase_amount)
 print("Discount:", discount, "%")
 
-
+# -------------------------
 
 ## Concepts covered 
 if
