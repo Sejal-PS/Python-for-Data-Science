@@ -1,5 +1,318 @@
 Matplotlib for Data Science
 
+Matplotlib is a Python library used for creating charts and visualizations.
+
+It is commonly used in Data Science for understanding and presenting data.
+
+Topics Covered
+
+Basic plotting
+
+Line chart
+
+Bar chart
+
+Scatter plot
+
+Histogram
+
+Pie chart
+
+Subplots
+
+Plot customization
+
+Saving plots
+
+Matplotlib with Pandas
+
+Practice exercises
+
+Files
+01_basic_plot.py
+
+Basic Matplotlib plotting and figure concepts.
+
+02_line_chart.py
+
+Line charts with titles, labels, markers and grid.
+
+03_bar_chart.py
+
+Bar charts for comparing different categories.
+
+04_scatter_plot.py
+
+Scatter plots for understanding the relationship between two numerical variables.
+
+05_histogram.py
+
+Histograms for understanding the distribution of numerical data.
+
+06_pie_chart.py
+
+Pie charts for showing proportions of different categories.
+
+07_subplots.py
+
+Creating multiple charts in a single figure.
+
+08_customization.py
+
+Colors, markers, line styles, legends, grid, labels and other plot formatting.
+
+09_save_plots.py
+
+Saving charts as PNG, PDF and SVG files.
+
+10_matplotlib_with_pandas.py
+
+Using Matplotlib with Pandas DataFrames for data visualization.
+
+11_practice.py
+
+Practice questions based on the Matplotlib topics covered in this folder.
+
+Common Matplotlib Functions
+import matplotlib.pyplot as plt
+
+plt.plot()
+plt.bar()
+plt.scatter()
+plt.hist()
+plt.pie()
+
+plt.title()
+plt.xlabel()
+plt.ylabel()
+
+plt.legend()
+plt.grid()
+
+plt.show()
+plt.savefig()
+
+Basic Example
+import matplotlib.pyplot as plt
+
+months = ["Jan", "Feb", "Mar", "Apr"]
+
+sales = [10000, 15000, 13000, 18000]
+
+plt.plot(
+    months,
+    sales,
+    marker="o"
+)
+
+plt.title("Monthly Sales")
+
+plt.xlabel("Month")
+
+plt.ylabel("Sales")
+
+plt.grid()
+
+plt.show()
+
+Installation
+
+Matplotlib can be installed using pip:
+
+pip install matplotlib
+
+
+Import Matplotlib:
+
+import matplotlib.pyplot as plt
+
+Important Concepts
+Line Plot
+
+Used to show trends over time.
+
+plt.plot(x, y)
+
+Bar Chart
+
+Used to compare categories.
+
+plt.bar(x, y)
+
+Scatter Plot
+
+Used to understand the relationship between two numerical variables.
+
+plt.scatter(x, y)
+
+Histogram
+
+Used to understand the distribution of numerical data.
+
+plt.hist(data)
+
+Pie Chart
+
+Used to show proportions or percentage share.
+
+plt.pie(values, labels=labels)
+
+Subplots
+
+Used to display multiple charts in one figure.
+
+fig, axes = plt.subplots(2, 2)
+
+Plot Customization
+
+Commonly used customization options:
+
+color
+linestyle
+linewidth
+marker
+markersize
+fontsize
+figsize
+legend
+grid
+xlim
+ylim
+
+
+Example:
+
+plt.plot(
+    x,
+    y,
+    color="blue",
+    linestyle="--",
+    linewidth=2,
+    marker="o"
+)
+
+Saving a Plot
+plt.savefig(
+    "chart.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+
+Matplotlib supports formats such as:
+
+PNG
+
+PDF
+
+SVG
+
+Matplotlib with Pandas
+
+Matplotlib is commonly used together with Pandas for Data Analysis and visualization.
+
+Pandas
+   ↓
+DataFrame
+   ↓
+Data Cleaning
+   ↓
+Data Analysis
+   ↓
+Matplotlib
+   ↓
+Visualization
+
+
+Example:
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    "Month": ["Jan", "Feb", "Mar", "Apr"],
+    "Sales": [10000, 15000, 13000, 18000]
+}
+
+df = pd.DataFrame(data)
+
+plt.plot(
+    df["Month"],
+    df["Sales"],
+    marker="o"
+)
+
+plt.title("Monthly Sales")
+
+plt.xlabel("Month")
+
+plt.ylabel("Sales")
+
+plt.show()
+
+Data Science Use Cases
+
+Matplotlib can be used for:
+
+Sales analysis
+
+Customer analysis
+
+Student performance analysis
+
+Salary analysis
+
+Time-series visualization
+
+Distribution analysis
+
+Comparing categories
+
+Understanding relationships between variables
+
+Exploratory Data Analysis (EDA)
+
+Presenting Data Science results
+
+Learning Flow
+Matplotlib
+   ↓
+Basic Plot
+   ↓
+Line Chart
+   ↓
+Bar Chart
+   ↓
+Scatter Plot
+   ↓
+Histogram
+   ↓
+Pie Chart
+   ↓
+Subplots
+   ↓
+Customization
+   ↓
+Save Plots
+   ↓
+Pandas + Matplotlib
+   ↓
+Practice
+
+Official Documentation
+
+Matplotlib Documentation:
+
+https://matplotlib.org/stable/
+
+
+
+
+---------------------------------------------------------------------
+
+
+""" Matplotlib for Data Science
+
 Matplotlib is a Python library used for creating graphs and visualizations.
 
 In Data Science, visualization helps us understand patterns, trends, distributions and relationships in data.
@@ -203,3 +516,5 @@ Official Documentation
 Matplotlib documentation:
 
 https://matplotlib.org/stable/
+
+"""
