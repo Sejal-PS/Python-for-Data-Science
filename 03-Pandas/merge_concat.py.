@@ -1,0 +1,381 @@
+# Pandas - Merge and Concat
+
+import pandas as pd
+
+
+# ==================================================
+# PART 1 - CONCAT
+# ==================================================
+
+
+# -------------------------
+# 1. Create First DataFrame
+# -------------------------
+
+df1 = pd.DataFrame({
+    "Name": ["Rahul", "Priya"],
+    "Marks": [80, 90]
+})
+
+print("DataFrame 1:")
+print(df1)
+
+
+# -------------------------
+# 2. Create Second DataFrame
+# -------------------------
+
+df2 = pd.DataFrame({
+    "Name": ["Amit", "Neha"],
+    "Marks": [75, 88]
+})
+
+print("\nDataFrame 2:")
+print(df2)
+
+
+# -------------------------
+# 3. Concatenate Rows
+# -------------------------
+
+result = pd.concat(
+    [df1, df2],
+    ignore_index=True
+)
+
+print("\nAfter Row-wise Concatenation:")
+print(result)
+
+
+# -------------------------
+# 4. Concatenate Columns
+# -------------------------
+
+df3 = pd.DataFrame({
+    "Age": [22, 24]
+})
+
+df4 = pd.DataFrame({
+    "City": ["Pune", "Mumbai"]
+})
+
+result = pd.concat(
+    [df3, df4],
+    axis=1
+)
+
+print("\nColumn-wise Concatenation:")
+print(result)
+
+
+# ==================================================
+# PART 2 - MERGE
+# ==================================================
+
+
+# -------------------------
+# 5. Student Data
+# -------------------------
+
+students = pd.DataFrame({
+    "Student_ID": [101, 102, 103, 104],
+    "Name": [
+        "Rahul",
+        "Priya",
+        "Amit",
+        "Neha"
+    ]
+})
+
+print("\nStudents:")
+print(students)
+
+
+# -------------------------
+# 6. Marks Data
+# -------------------------
+
+marks = pd.DataFrame({
+    "Student_ID": [101, 102, 103, 105],
+    "Marks": [80, 90, 75, 88]
+})
+
+print("\nMarks:")
+print(marks)
+
+
+# -------------------------
+# 7. Inner Merge
+# -------------------------
+
+inner_merge = pd.merge(
+    students,
+    marks,
+    on="Student_ID",
+    how="inner"
+)
+
+print("\nInner Merge:")
+print(inner_merge)
+
+
+# -------------------------
+# 8. Left Merge
+# -------------------------
+
+left_merge = pd.merge(
+    students,
+    marks,
+    on="Student_ID",
+    how="left"
+)
+
+print("\nLeft Merge:")
+print(left_merge)
+
+
+# -------------------------
+# 9. Right Merge
+# -------------------------
+
+right_merge = pd.merge(
+    students,
+    marks,
+    on="Student_ID",
+    how="right"
+)
+
+print("\nRight Merge:")
+print(right_merge)
+
+
+# -------------------------
+# 10. Outer Merge
+# -------------------------
+
+outer_merge = pd.merge(
+    students,
+    marks,
+    on="Student_ID",
+    how="outer"
+)
+
+print("\nOuter Merge:")
+print(outer_merge)
+
+
+# ==================================================
+# PART 3 - MERGE USING DIFFERENT COLUMN NAMES
+# ==================================================
+
+
+# -------------------------
+# 11. Customer Data
+# -------------------------
+
+customers = pd.DataFrame({
+    "Customer_ID": [1, 2, 3],
+    "Name": [
+        "Rahul",
+        "Priya",
+        "Amit"
+    ]
+})
+
+print("\nCustomers:")
+print(customers)
+
+
+# -------------------------
+# 12. Orders Data
+# -------------------------
+
+orders = pd.DataFrame({
+    "Cust_ID": [1, 2, 3],
+    "Amount": [
+        5000,
+        7000,
+        4500
+    ]
+})
+
+print("\nOrders:")
+print(orders)
+
+
+# -------------------------
+# 13. Merge Different Column Names
+# -------------------------
+
+result = pd.merge(
+    customers,
+    orders,
+    left_on="Customer_ID",
+    right_on="Cust_ID",
+    how="inner"
+)
+
+print("\nMerge Using Different Column Names:")
+print(result)
+
+
+# ==================================================
+# PART 4 - MULTIPLE DATASETS
+# ==================================================
+
+
+# -------------------------
+# 14. Employee Data
+# -------------------------
+
+employee = pd.DataFrame({
+    "Employee_ID": [1, 2, 3],
+    "Name": [
+        "A", "B", "C"
+    ]
+})
+
+
+# -------------------------
+# 15. Salary Data
+# -------------------------
+
+salary = pd.DataFrame({
+    "Employee_ID": [1, 2, 3],
+    "Salary": [
+        30000,
+        40000,
+        50000
+    ]
+})
+
+
+# -------------------------
+# 16. Department Data
+# -------------------------
+
+department = pd.DataFrame({
+    "Employee_ID": [1, 2, 3],
+    "Department": [
+        "IT",
+        "HR",
+        "Sales"
+    ]
+})
+
+
+# -------------------------
+# 17. Merge Employee + Salary
+# -------------------------
+
+employee_salary = pd.merge(
+    employee,
+    salary,
+    on="Employee_ID"
+)
+
+print("\nEmployee + Salary:")
+print(employee_salary)
+
+
+# -------------------------
+# 18. Merge Final Dataset
+# -------------------------
+
+final_employee_data = pd.merge(
+    employee_salary,
+    department,
+    on="Employee_ID"
+)
+
+print("\nFinal Employee Dataset:")
+print(final_employee_data)
+
+
+# ==================================================
+# PART 5 - PRACTICAL DATA SCIENCE EXAMPLE
+# ==================================================
+
+
+# -------------------------
+# 19. Customer Information
+# -------------------------
+
+customer_data = pd.DataFrame({
+    "Customer_ID": [101, 102, 103, 104],
+    "Customer_Name": [
+        "Rahul",
+        "Priya",
+        "Amit",
+        "Neha"
+    ]
+})
+
+
+# -------------------------
+# 20. Sales Information
+# -------------------------
+
+sales_data = pd.DataFrame({
+    "Customer_ID": [101, 102, 103, 105],
+    "Product": [
+        "Laptop",
+        "Mobile",
+        "Tablet",
+        "Monitor"
+    ],
+    "Sales": [
+        55000,
+        25000,
+        18000,
+        22000
+    ]
+})
+
+
+# -------------------------
+# 21. Combine Customer and Sales
+# -------------------------
+
+customer_sales = pd.merge(
+    customer_data,
+    sales_data,
+    on="Customer_ID",
+    how="left"
+)
+
+print("\nCustomer Sales Data:")
+print(customer_sales)
+
+
+# -------------------------
+# 22. Check Missing Sales
+# -------------------------
+
+print("\nMissing Sales:")
+print(
+    customer_sales["Sales"].isnull().sum()
+)
+
+
+# -------------------------
+# 23. Fill Missing Sales
+# -------------------------
+
+customer_sales["Sales"] = customer_sales[
+    "Sales"
+].fillna(0)
+
+print("\nFinal Customer Sales Data:")
+print(customer_sales)
+
+
+# -------------------------
+# 24. Total Sales
+# -------------------------
+
+print("\nTotal Sales:")
+
+print(
+    customer_sales["Sales"].sum()
+)
